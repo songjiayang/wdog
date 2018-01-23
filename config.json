@@ -1,0 +1,30 @@
+{
+  "processes": [ 
+    {
+      "name": "java.exe",
+      "rcmd": "E:/QiniuFace/infoQuery/start.bat",
+      "endpoint": "http://localhost:8080",
+      
+      "checkInterval": 15,
+      "reloadInterval": 10800
+    },
+    
+    {
+      "name": "gateway.exe",
+      "rcmd": "E:/QiniuFace/gateway/start.bat",
+      "endpoint": "http://localhost:9090",
+      
+      "checkInterval": 15,
+      "reloadInterval": 10800
+    },
+    
+    {
+      "name": "anylysis.exe",
+      "rcmd": "E:/QiniuFace/anylysis/start.bat",
+      "endpoint": "http://localhost:8904",
+      
+      "checkInterval": 15,
+      "reloadInterval": 10800
+    }
+  ]
+}
