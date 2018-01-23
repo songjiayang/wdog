@@ -77,8 +77,10 @@ func (p *Process) check() {
 		return
 	}
 
-	if p.isHalt() {
-		p.reload(pids)
+	if p.cfg.Endpoint != "" {
+		if p.isHalt() {
+			p.reload(pids)
+		}
 	}
 }
 
