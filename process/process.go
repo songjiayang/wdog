@@ -51,15 +51,17 @@ func (p *Process) Run() {
 	}()
 
 	// reload interval
-	go func() {
-		for {
-			time.Sleep(p.reloadInterval)
+	if p.cfg.ReloadInterval > 0 {
+		go func() {
+			for {
+				time.Sleep(p.reloadInterval)
 
-			p.mux.Lock()
-			p.reload(p.pids())
-			p.mux.Unlock()
-		}
-	}()
+				p.mux.Lock()
+				p.reload(p.pids())
+				p.mux.Unlock()
+			}
+		}()
+	}
 }
 
 func (p *Process) start() {
