@@ -1,7 +1,7 @@
 # wdog
 Windows process watch dog, make your program never die.
 
-### Installation
+### Install
 
 Use `go get github.com/songjiayang/wdog`  or download the binary [release](https://github.com/songjiayang/wdog/releases).
 
@@ -41,5 +41,5 @@ A example:
 ### Features
 
 - die check
-- halt check  (the http can't respoonse)
+- hangs check  (http can't respoonse)
 - auto reload with interval
